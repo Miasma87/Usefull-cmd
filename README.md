@@ -6,3 +6,12 @@ Usefull-cmd
 
 * Extract every `word`, and add surround of 3 lines before and 2 after, in every files (including executables) from a folder  
 `strings * | grep -B 3 -A 2 'word'`
+
+* Extract every hexadecimal key of 8 char  
+`strings * | grep -oE "(?:00|01):?[a-fA-F0-9]{8}"`
+
+* Extract every hexadecimal key of 16 char  
+`strings * | grep -oE "(?:00|01):?[a-fA-F0-9]{16}"`
+
+* Extract every hexadecimal key of 32 char  
+`strings * | grep -oE "(?:00|01):?[a-fA-F0-9]{32}"`
