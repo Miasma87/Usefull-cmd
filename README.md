@@ -15,3 +15,6 @@ Usefull-cmd
 
 * Extract every hexadecimal key of 32 char  
 `strings * | grep -oE "(?:00|01):?[a-fA-F0-9]{32}"`
+
+* Extract rsa public key  
+`strings * | grep -oE "AAAA[0-9A-Za-z+/]+[=]{0,3} ([^@]+@[^@]+)"`
