@@ -18,3 +18,9 @@ Usefull-cmd
 
 * Extract rsa public key  
 `strings * | grep -oE "AAAA[0-9A-Za-z+/]+[=]{0,3} ([^@]+@[^@]+)"`
+
+* Extract rsa private key  
+`strings * | sed -n -e '/-----BEGIN RSA PRIVATE KEY-----/,/-----END RSA PRIVATE KEY-----/ p'`
+
+* Extract every certificate  
+`strings * | sed -n -e '/-----BEGIN CERTIFICATE-----/,/-----END CERTIFICATE-----/ p'`
